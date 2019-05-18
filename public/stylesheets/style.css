@@ -42,6 +42,10 @@ body {
 	overflow: hidden;
 }
 
+.mono {
+	font-family: 'Overpass Mono', monospace;
+}
+
 .panel-address-summary {
  margin-bottom: 5px;
 }
@@ -96,16 +100,9 @@ tr {
 	margin-left:5px;
 }
 
-#twitter-icon, 
-#facebook-icon, 
-#googleplus-icon, 
-#bitcointalk-icon, 
-#website-icon, 
-#github-icon, 
-#slack-icon {
+#twitter-icon {
 	font-size: 20px;
 }
-
 .connections {
 	position: absolute;
 	bottom: 15px;
@@ -116,28 +113,13 @@ tr {
 	margin-right: 10px;
 }
 
-#twitter-icon img, 
-#facebook-icon img, 
-#googleplus-icon img, 
-#bitcointalk-icon img, 
-#website-icon img, 
-#github-icon img, 
-#slack-icon img{
+#twitter-icon img{
 	width: 40px;
 	margin: 5px 5px;
 }
 
 #market_menu {
 	margin-bottom: 5px;
-}
-
-#hashratepanel span,
-#difficultypanel span,
-#supplypanel span,
-#masternodepanel span,
-#pricepanel span{
-	margin: 0 5px 0 5px;
-	top: 0;
 }
 
 .label a:link {
@@ -186,3 +168,59 @@ tr {
 	bottom: 0px;
 }
 
+.panel-summary p {
+	font-size: 13px;
+	margin: 0 0 3px;
+}
+
+.panel-summary h1 {
+	font-size: 16px;
+	margin-top: 0;
+	margin-bottom: 0px;
+	line-height: 0.8;
+
+}
+
+.panel-summary h3 {
+	font-size: 12px;
+	color: gray;
+	margin-top: 3px;
+	margin-bottom: 0;
+}
+
+.panel-summary h5 {
+	font-size: 12px;
+	margin-top: 3px;
+	margin-bottom: 0;
+}
+
+.panel-summary .panel-body {
+	min-height: 90px;
+}
+
+.coin-info {
+
+}
+
+.coin-info h2 {
+	margin: 3px;
+	padding: 0;
+}
+
+.coin-info h5.sub {
+	margin: 0;
+	padding: 0;
+	color: #ababab;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.coin-info .info-row {
+	min-height: 100px;
+	padding-top: 10px;
+	margin: 10px;
+}
+
+.coin-info .row.earnings {
+	margin-bottom: 5px;
+}

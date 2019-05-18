@@ -1,14 +1,9 @@
-Ciquidus Alpha - 1.7.2
+This explorer is forked from Luke's Explorer (https://github.com/iquidus/explorer)  with a bit of flavoring from https://github.com/masterhash-us/Explorer, which seems to be gone now. Cleaning up README.md. History can be found in the first upload commit.
+
+Iquidus Explorer - 1.6.1
 ================
 
-The Chaincoin block explorer.
-
-This project is a fork of [Iquidus Explorer](https://github.com/iquidus/explorer) so massive thanks go out to Luke Williams for his code! Thank you!!!
-
-### See it in action
-
-*  [http://54.37.18.226:3001/](http://54.37.18.226:3001/)
-
+An open source block explorer written in node.js.
 
 ### Requires
 
@@ -28,7 +23,7 @@ Create databse:
 
 Create user with read/write access:
 
-    > db.createUser( { user: "ciquidus", pwd: "3xp!0reR", roles: [ "readWrite" ] } )
+    > db.createUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite" ] } )
 
 *note: If you're using mongo shell 2.4.x, use the following to create your user:
 
@@ -36,14 +31,11 @@ Create user with read/write access:
 
 ### Get the source
 
-    git clone https://github.com/jayanh/ciquidus explorer
+    git clone https://github.com/FantasyGold/FGC-Explorer
 
 ### Install node modules
 
     cd explorer && npm install --production
-    
-    Note: if you get error with /lib/kerberosgss
-    do sudo apt-get install libkrb5-d
 
 ### Configure
 
@@ -54,10 +46,6 @@ Create user with read/write access:
 ### Start Explorer
 
     npm start
-    
-    To use forever to start (run in directory of explorer):
-    npm install forever -g
-    forever start -c "npm start" ./
 
 *note: mongod must be running to start the explorer*
 
@@ -74,8 +62,6 @@ To stop the cluster you can use
 sync.js (located in scripts/) is used for updating the local databases. This script must be called from the explorers root directory.
 
     Usage: node scripts/sync.js [database] [mode]
-    Example: node scripts/sync.js index reindex
-             node scripts/sync.js index update
 
     database: (required)
     index [mode] Main index: coin info/stats, transactions & addresses
@@ -103,17 +89,16 @@ sync.js (located in scripts/) is used for updating the local databases. This scr
     */2 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
     */5 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
 
-forcesync.sh and forcesynclatest.sh (located in scripts/) can be used to force the explorer to sync at the specified block heights
-
 ### Wallet
 
-The wallet connected to Ciquidus must be running with atleast the following flags:
+Iquidus Explorer is intended to be generic so it can be used with any wallet following the usual standards. The wallet must be running with atleast the following flags
 
     -daemon -txindex
 
-### Donate
-    
-    BTC: 1EXZTqbmg2iHCTYtmibnT8qGvhmExVCu8e
+### Donate (Left Luke's addresses, please contribute!)  
+
+    BTC: 168hdKA3fkccPtkxnX8hBrsxNubvk4udJi
+    JBS: JZp9893FMmrm1681bDuJBU7c6w11kyEY7D (no longer valid, use BTC address)
 
 ### Known Issues
 
@@ -143,7 +128,6 @@ Where [SIZE] is an integer higher than the default.
 
 ### License
 
-Copyright (c) 2017, The Chaincoin Community  
 Copyright (c) 2015, Iquidus Technology  
 Copyright (c) 2015, Luke Williams  
 All rights reserved.
